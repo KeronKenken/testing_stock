@@ -13,8 +13,8 @@ import org.salespointframework.quantity.Metric;
 
 //(?????)
 // Da der Shop DVD sowie BluRay verkaufen soll ist es sinnvoll eine gemeinsame Basisklasse zu erstellen.
-// Diese erbt von Product um die Catalog-Klasse aus Salespoint nutzen zu können.
-// Ein Primärschlüssel ist nicht notwendig, da dieser schon in Product definiert ist, alle anderen JPA-Anforderungen müssen aber erfüllt werden
+// Diese erbt von Product um die Catalog-Klasse aus Salespoint nutzen zu kÃ¶nnen.
+// Ein PrimÃ¤rschlÃ¼ssel ist nicht notwendig, da dieser schon in Product definiert ist, alle anderen JPA-Anforderungen mÃ¼ssen aber erfÃ¼llt werden
 @Entity
 public class Article extends Product {
   
@@ -29,14 +29,14 @@ public class Article extends Product {
   }
   
   // (?????)
-  // primitve Typen oder Strings müssen nicht extra für JPA annotiert werden
+  // primitve Typen oder Strings mÃ¼ssen nicht extra fÃ¼r JPA annotiert werden
   private String articleID;
   private Company company;
   private ArticleType type;
   private Metric metric;
   
   // (?????)
-  // Jede Disc besitzt mehrere Kommentare, eine "1 zu n"-Beziehung -> @OneToMany für JPA
+  // Jede Disc besitzt mehrere Kommentare, eine "1 zu n"-Beziehung -> @OneToMany fÃ¼r JPA
   // cascade gibt an, was mit den Kindelementen (Comment) passieren soll wenn das Parentelement (Disc) mit der Datenbank
   // "interagiert"
   @OneToMany(cascade = CascadeType.ALL) //
@@ -68,10 +68,10 @@ public class Article extends Product {
   }
   
   // (?????)
-  // Es ist immer sinnvoll sich zu überlegen wie speziell der Rückgabetyp sein sollte
-  // Da sowies nur über die Kommentare iteriert wird, ist ein Iterable<T> das sinnvollste.
-  // Weil wir keine Liste zurück geben, verhindern wir auch, dass jemand die comments-Liste einfach durch clear() leert.
-  // Deswegen geben auch so viele Salespoint Klassen nur Iterable<T> zurück ;)
+  // Es ist immer sinnvoll sich zu Ã¼berlegen wie speziell der RÃ¼ckgabetyp sein sollte
+  // Da sowies nur Ã¼ber die Kommentare iteriert wird, ist ein Iterable<T> das sinnvollste.
+  // Weil wir keine Liste zurÃ¼ck geben, verhindern wir auch, dass jemand die comments-Liste einfach durch clear() leert.
+  // Deswegen geben auch so viele Salespoint Klassen nur Iterable<T> zurÃ¼ck ;)
   public Iterable<Comment> getComments() {
     return comments;
   }
