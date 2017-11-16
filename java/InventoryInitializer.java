@@ -56,8 +56,8 @@ class InventoryInitializer implements DataInitializer {
  	public void initialize() {
     
   		// (?????)
-  		// Über alle Discs iterieren und jeweils ein InventoryItem mit der Quantity 10 setzen
-  		// Das heißt: Von jeder Disc sind 10 Stück im Inventar.
+  		// Ãœber alle Discs iterieren und jeweils ein InventoryItem mit der Quantity 10 setzen
+  		// Das heiÃŸt: Von jeder Disc sind 10 StÃ¼ck im Inventar.
     
   		videoCatalog.findAll().forEach(disc -> {
       
