@@ -70,7 +70,7 @@ class CatalogController {
   
   // (?????)
   // Befindet sich die angesurfte Url in der Form /foo/5 statt /foo?bar=5 so muss man @PathVariable benutzen
-  // Lekt¸re: http://spring.io/blog/2009/03/08/rest-in-spring-3-mvc/
+  // Lekt√ºre: http://spring.io/blog/2009/03/08/rest-in-spring-3-mvc/
   @GetMapping("/disc/{disc}")
   String detail(@PathVariable Disc disc, Model model) {
     
@@ -85,7 +85,7 @@ class CatalogController {
   }
   
   // (?????)
-  // Der Katalog bzw die Datenbank "weiﬂ" nicht, dass die Disc mit einem Kommentar versehen wurde,
+  // Der Katalog bzw die Datenbank "wei√ü" nicht, dass die Disc mit einem Kommentar versehen wurde,
   // deswegen wird die update-Methode aufgerufen
   @PostMapping("/disc/{disc}/comments")
   public String comment(@PathVariable Disc disc, @Valid CommentAndRating payload) {
