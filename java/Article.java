@@ -58,7 +58,7 @@ public class Article extends Product {
     return articleID;
   }
   
-  public void addAmount() {
+/*  public void addAmount() {
     
     
     
@@ -75,12 +75,12 @@ public class Article extends Product {
   public Iterable<Comment> getComments() {
     return comments;
   }
-  
-  public String getImage() {
-    return image;
+  */
+  public Company getCompany() {
+    return company;
   }
   
-  public DiscType getType() {
+  public ArticleType getType() {
     return type;
   }
 }
