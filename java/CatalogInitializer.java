@@ -16,15 +16,15 @@ import org.springframework.util.Assert;
  */
 @Component
 @Order(20)
-class CatalogInitializer implements DataInitializer {
+class StockInitializer implements DataInitializer {
   
-  private final VideoCatalog videoCatalog;
+  private final StockManagement stockmanagement;
   
-  CatalogInitializer(VideoCatalog videoCatalog) {
+  StockInitializer(StockManagement stockmanagement) {
     
-      Assert.notNull(videoCatalog, "VideoCatalog must not be null!");
+      Assert.notNull(stockmanagement, "Stockmanagement must not be null!");
     
-      this.videoCatalog = videoCatalog;
+      this.stockmanagement = stockmanagement;
   }
   
   /* 
@@ -34,11 +34,11 @@ class CatalogInitializer implements DataInitializer {
   @Override
   public void initialize() {
     
-      if (videoCatalog.findAll().iterator().hasNext()) {
+      if (stockmanagement.findAll().iterator().hasNext()) {
         return;
       }
     
-      videoCatalog.save(new Article("Benzin", ArticleType.KRAFTSTOFF, BenzinGbR, Metric.Liter));
+      stockmanagement.save(new Article("Benzin", ArticleType.KRAFTSTOFF, BenzinGbR, Metric.Liter));
       
   }
   }
