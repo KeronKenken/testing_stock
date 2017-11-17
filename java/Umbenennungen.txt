@@ -1,0 +1,12 @@
+InventoryController -> StockManagement
+videoshop (Paket) -> McTank
+inventory (Paket) -> Stockmanagement
+VideoCatalog.java -> Stockmanagement.java
+
+
+
+
+braucht company eine liste aller verfügbaren article?
+braucht article einen namen und eine (extra) id?
+article - preis
+article - Amount
